@@ -1,3 +1,5 @@
+----What was the first item from the menu purchased by each customer?
+
 With A as
 (select  s.customer_id, m.product_name , s.order_date ,
         DENSE_RANK() OVER (PARTITION BY S.Customer_ID Order by S.order_date) as RANK
